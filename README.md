@@ -1,2 +1,2 @@
 # FCC-Program
-Notes and code snippets during FCC's curriculum
+My notes and code snippets during FCC's curriculum
