@@ -80,3 +80,31 @@ arr.pop() // removes last item and stores it so it can be assigned to a variable
 arr.shift() // removes first item
 arr.unshift() // addes item to the first place in the array
 ```
+Equality operator (==) and the strict equality operator (===) (diff: the data type also has to match when strict equality operator is used)
+The inequality operator (!=)
+Examples
+
+* 1 != 2 // true
+* 1 != "1" // false
+* 1 != '1' // false
+* 1 != true // false
+* 0 != false // false
+
+The strict inequality operator (!==)
+
+The logical and operator (&&)
+Both of the below code will only return "Yes" if num is greater than 5 and less than 10.
+```javascript
+if (num > 5) {
+  if (num < 10) {
+    return "Yes";
+  }
+}
+return "No";
+```
+```javascript
+if (num > 5 && num < 10) {
+  return "Yes";
+}
+return "No";
+```
