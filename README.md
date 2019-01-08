@@ -133,3 +133,21 @@ var testObj = {
   "the drink": "water"
 };
 ```
+arbitrary = based on random choice or personal whim, rather than any reason or system.
+
+An example of a complex data structure:
+```javascript
+var ourMusic = [
+  {
+    "artist": "Daft Punk",
+    "title": "Homework",
+    "release_year": 1997,
+    "formats": [ 
+      "CD", 
+      "Cassette", 
+      "LP"
+    ],
+    "gold": true
+  }
+];
+```
