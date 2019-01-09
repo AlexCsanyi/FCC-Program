@@ -163,4 +163,6 @@ while(i < 5) {
   ourArray.push(i);
   i++;
 }
+
+console.log(ourArray); //it is [0,1,2,3,4]
 ```
