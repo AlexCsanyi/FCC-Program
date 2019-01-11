@@ -109,6 +109,7 @@ function removeDetail(key) {
 ```
 
 ### More Exercises 
+https://www.rithmschool.com/courses/intermediate-javascript/javascript-nested-data-structures-objects-exercises
 
 ```javascript
 var nestedData = {
