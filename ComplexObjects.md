@@ -58,6 +58,7 @@ When adding keys to an object, if you do NOT know exactly what the name of the k
 * A function called displayCities that console.logs all the values in the citiesLivedIn array
 * A function called displayHometownData that console.logs all the values inside of the hometown object
 * A function called addDetail that accepts two parameters, a key and a value and adds the key and value to the moreDetails object and returns the moreDetails object
+* A function called removeDetail that removes a key in the moreDetails object and returns the moreDetails object.
 
 ```javascript
 var instructorData = {
@@ -98,4 +99,66 @@ function addDetail(addKey, addValue) {
     return detailsObject;
 };
 
+function removeDetail(key) {
+  var detailsObject = instructorData.additionalData.moreDetails;
+  var valueToBeRemoved = detailsObject[key];
+  delete detailsObject[key];
+  return detailsObject;
+};
+
+```
+
+### More Exercises 
+
+```javascript
+var nestedData = {
+  innerData: {
+    order: ["first", "second", "third"],
+    snacks: ["chips", "fruit", "crackers"],
+    numberData: {
+        primeNumbers: [2,3,5,7,11],
+        fibonnaci: [1,1,2,3,5,8,13]
+    },
+    addSnack: function(snack){
+        this.snacks.push(snack);
+        return this;
+    }
+  }
+}
+
+/* Using a for loop, console.log all of the numbers in the primeNumbers array. */
+function displayPrimeNumbers() {
+  var primeNumbersArray = nestedData.innerData.numberData.primeNumbers;
+  for (var i=0; i < primeNumbersArray.length; i++) {
+    console.log(primeNumbersArray[i]);
+  }
+};
+
+/* Using a for loop, console.log all of the even Fibonnaci numbers. */
+function displayFibonnaci() {
+  var fibonnaciArray = nestedData.innerData.numberData.fibonnaci;
+  for (var i=0; i < fibonnaciArray.length; i++) {
+    if(fibonnaciArray[i] % 2 === 0) {
+      console.log(fibonnaciArray[i])
+    }
+  }
+};
+
+/* Console.log the value "second" inside the order array. */
+function printSecond() {
+  var valueSecond = nestedData.innerData.order[1];
+  console.log(valueSecond);
+}
+/* OR 
+console.log(nestedData.innerData.order[1]);
+*/
+
+/* Invoke the addSnack function and add the snack "chocolate" */
+function newSnack(value) {
+  nestedData.innerData.snacks.push(value);
+  return nestedData.innerData.snacks;
+}
+/* OR
+nestedData.innerData.addSnack("Chocolate")
+*/
 ```
