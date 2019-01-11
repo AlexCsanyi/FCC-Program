@@ -162,3 +162,34 @@ function newSnack(value) {
 nestedData.innerData.addSnack("Chocolate")
 */
 ```
+
+```javascript
+var nestedObject = {
+  speakers: [{name:"Elie"},{name:"Tim"},{name:"Matt"}],
+  data: {
+    continents: {
+      europe: {
+        countries: {
+          switzerland: {
+            capital: "Bern",
+            population: 8000000
+          }
+        }
+      }
+    },
+    languages: {
+      spanish: {
+          hello: "Hola"
+      },
+      french: {
+          hello: "Bonjour"
+      }
+    }
+  }
+}
+
+/* Write a function addSpeaker to add a speaker to the array of speakers. The speaker you add must be an object with a key of name and a value of whatever you'd like. */
+nestedObject.speakers.push({name: "Alex"})
+console.log(nestedObject.speakers)
+
+```
