@@ -49,3 +49,17 @@ console.log(printNumTwo());
 console.log(i);
 // returns "i is not defined"
 ```
+"const" has all the awesome features that let has, with the added bonus that variables declared using const are read-only. They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned.
+
+ES6: Arrow Functions with Parameters
+
+```javascript
+const myConcat = function(arr1, arr2) {
+  "use strict";
+  return arr1.concat(arr2);
+};
+
+// the abov function using Arrow Functions
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+```
