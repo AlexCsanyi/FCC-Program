@@ -166,3 +166,9 @@ while(i < 5) {
 
 console.log(ourArray); //it is [0,1,2,3,4]
 ```
+
+The conditional operator, also called the ternary operator, can be used as a one line if-else expression.
+The syntax is:
+```javascript
+condition ? statement-if-true : statement-if-false;
+```
