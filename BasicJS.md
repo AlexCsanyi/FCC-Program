@@ -1,4 +1,5 @@
 # FCC-Program
+
 ### My notes and code snippets during FCC's curriculum
 
 Meaning of data in CS is anything that is meaningful to a computer. JS data types:
@@ -171,4 +172,19 @@ The conditional operator, also called the ternary operator, can be used as a one
 The syntax is:
 ```javascript
 condition ? statement-if-true : statement-if-false;
+
+// this is an if-else statement
+function findGreater(a, b) {
+  if(a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater";
+  }
+}
+
+// this can be replaced with the conditional operator
+function findGreater(a, b) {
+  return a > b ? "a is greater" : "b is greater";
+}
 ```
