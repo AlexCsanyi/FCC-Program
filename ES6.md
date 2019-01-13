@@ -63,3 +63,22 @@ const myConcat = function(arr1, arr2) {
 const myConcat = (arr1, arr2) => arr1.concat(arr2);
 
 ```
+Higher order functions:
+
+Traversy Media - Youtube Course:
+```javascript
+// predefined arrays
+const companies = [
+  {name: "Company One", category: "Finance", start: 1981, end: 2003},
+  {name: "Company Two", category: "Retail", start: 1981, end: 2003},
+  {name: "Company Three", category: "Auto", start: 1981, end: 2003},
+  {name: "Company Four", category: "Retail", start: 1981, end: 2003},
+  {name: "Company Five", category: "Technology", start: 1981, end: 2003},
+  {name: "Company Six", category: "Finance", start: 1981, end: 2003},
+  {name: "Company Seven", category: "Auto", start: 1981, end: 2003},
+  {name: "Company Eight", category: "Technology", start: 1981, end: 2003},
+  {name: "Company Nine", category: "Retail", start: 1981, end: 2003}
+];
+
+const ages = [53, 12, 28, 33, 11, 21, 46, 89, 99
+```
