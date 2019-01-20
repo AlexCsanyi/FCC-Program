@@ -80,5 +80,5 @@ const companies = [
   {name: "Company Nine", category: "Retail", start: 1981, end: 2003}
 ];
 
-const ages = [53, 12, 28, 33, 11, 21, 46, 89, 99
+const ages = [53, 12, 28, 33, 11, 21, 46, 89, 99];
 ```
