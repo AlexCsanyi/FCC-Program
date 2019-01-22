@@ -82,3 +82,18 @@ const companies = [
 
 const ages = [53, 12, 28, 33, 11, 21, 46, 89, 99];
 ```
+
+Compute the square of only the positive integers (decimal numbers are not integers) in the array realNumberArray and store the new array in the variable squaredIntegers:
+
+```javascript
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+const squareList = (arr) => {
+  "use strict";
+  const squaredIntegers = realNumberArray
+    .filter((integer) => Number.isInteger(integer) === true && integer > 0)
+    .map(num => Math.pow(num, 2));
+  return squaredIntegers;
+};
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
+```
