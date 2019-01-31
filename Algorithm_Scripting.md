@@ -39,3 +39,28 @@ console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"
 
 // returns 6
 ```
+
+### TASK 3:
+
+Check if a string (first argument, str) ends with the given target string (second argument, target).
+
+This can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
+```javascript
+function confirmEnding(str, target) {
+  
+  // get the length of target and store it as a variable 
+  let lengthOfTarget = target.length;
+  
+  /* using the substr method return the required segment of the string.
+  Minus (-) ensures we start at the end of the string. 
+  The segment will be as long as the length of the target.
+  If the target variable is the same as the end of the string, return true, else return false */
+  
+  if(str.substr(-lengthOfTarget) === target){
+    return true;
+  } else {return false};
+}
+
+console.log(confirmEnding("Open sesame", "same"));
+// returns true
+```
