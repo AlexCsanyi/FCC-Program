@@ -64,3 +64,34 @@ function confirmEnding(str, target) {
 console.log(confirmEnding("Open sesame", "same"));
 // returns true
 ```
+
+### TASK 4:
+
+Truncate a string (first argument) if it is longer than the given maximum string length (second argument). 
+Return the truncated string with a ... ending.
+
+truncateString("Peter Piper picked a peck of pickled peppers", 11) should return "Peter Piper...".
+
+```javascript
+function truncateString(str, num) {
+  
+  // create a variable to store the new truncated string (strings are immutable)
+  let shortStr = "";
+  
+  /* using substring as long as num is shorter than the length of the string we truncate and add "..."
+     else we return the string */
+     
+  if(num < str.length){
+    shortStr = str.substring(0,num) + "...";
+    return shortStr;
+  } else {
+    return str;
+  }
+}
+
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 45));
+// returns A-tisket a-tasket A green and yellow basket
+
+console.log(truncateString("Peter Piper picked a peck of pickled peppers", 11))
+// returns Peter Piper...
+```
