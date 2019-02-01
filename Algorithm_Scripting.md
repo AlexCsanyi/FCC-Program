@@ -95,3 +95,28 @@ console.log(truncateString("A-tisket a-tasket A green and yellow basket", 45));
 console.log(truncateString("Peter Piper picked a peck of pickled peppers", 11))
 // returns Peter Piper...
 ```
+
+### TASK 5:
+
+Create a function that looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument). If no element passes the test, return undefined.
+
+findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }) should return 8.
+
+```javascript
+// using filter() method
+function findElement(arr, func) {
+  
+  // store elements that fulfill the function in an array 
+  let myArr = arr.filter(func);
+  
+  // check if array is empty
+  if(myArr.length == 0){
+    return undefined; // if it is return undefined
+  }else{
+    return myArr[0]; // if it has at least 1 element return the first one
+  } 
+}
+
+console.log(findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }));
+// returns undefined
+```
