@@ -152,3 +152,25 @@ function titleCase(str) {
 console.log(titleCase("sHoRt AnD sToUt"));
 // returns: Short And Stout
 ```
+
+### TASK 7:
+Remove all falsy values from an array.
+
+Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+(converting each value to a Boolean.)
+
+```javascript
+function bouncer(arr) {
+  /* using filter()
+     we covert the elements of the array to boolean using !! operator
+     if they are not false (!=) we store them in a new array */
+  
+  let trueOnly = arr.filter(val => !!val != false);
+  
+  // we return the new array
+  return trueOnly;
+}
+
+console.log(bouncer([1, null, NaN, 2, undefined]));
+// returns [1, 2]
+```
