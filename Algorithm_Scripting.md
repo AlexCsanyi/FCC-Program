@@ -120,3 +120,35 @@ function findElement(arr, func) {
 console.log(findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }));
 // returns undefined
 ```
+
+### TASK 6:
+
+Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+For the purpose of this exercise, you should also capitalize connecting words like "the" and "of".
+
+```javascript
+function titleCase(str) {
+
+  // new variable where all characters are lower case
+  let myStr = str.toLowerCase();
+  
+  // split the new str into an array of words
+  let myArr = myStr.split(' ');
+  
+  /* using for loop iterate through all words and turn the first letter to uppercase
+     using charAt() and toUpperCase() add the rest of the letter with slice()
+     slice(): returns a copy of a portion of an array into a new array object
+     push the new words into the newArr */
+     
+  let newArr = []
+  for(let i = 0; i < myArr.length; i++){
+    newArr.push(myArr[i].charAt(0).toUpperCase() + myArr[i].slice(1));
+  }
+  
+  // return the new array and join the elements into 1 string using join()
+  return newArr.join(' ')
+}
+
+console.log(titleCase("sHoRt AnD sToUt"));
+// returns: Short And Stout
+```
