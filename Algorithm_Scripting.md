@@ -174,3 +174,29 @@ function bouncer(arr) {
 console.log(bouncer([1, null, NaN, 2, undefined]));
 // returns [1, 2]
 ```
+
+### TASK 8:
+Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
+
+For example, getIndexToIns([1,2,3,4], 1.5) should return 1 because it is greater than 1 (index 0), but less than 2 (index 1).
+
+```javascript
+function getIndexToIns(arr, num) {
+  // push item in the array at the end
+  arr.push(num);
+  
+  // sort array from smallest to highest
+  arr.sort((a,b) => a - b);
+  
+  // return the index of num
+  let index = arr.indexOf(num);
+  return index;
+}
+
+console.log(getIndexToIns([2, 5, 10], 15));
+// reutrns 3 - the index of num
+
+/* one line solution
+return arr.concat(num).sort((a,b) => a-b).indexOf(num);
+*/
+```
