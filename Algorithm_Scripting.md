@@ -200,3 +200,42 @@ console.log(getIndexToIns([2, 5, 10], 15));
 return arr.concat(num).sort((a,b) => a-b).indexOf(num);
 */
 ```
+
+### TASK 9:
+Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+
+For example, ["hello", "Hello"], should return true because all of the letters in the second string are present in the first, ignoring case.
+
+The arguments ["hello", "hey"] should return false because the string "hello" does not contain a "y".
+
+Lastly, ["Alien", "line"], should return true because all of the letters in "line" are present in "Alien".
+
+```javascript
+function mutation(arr) {
+
+  // first I split the first and second element into arrays of letters
+  let newArr = arr[0].split('');
+  let secondArr = arr[1].split('');
+  
+  // then I turn all elements into lowercase
+  let arrOneLowercase = newArr.map(item => item.toLowerCase());
+  let arrTwoLowercase = secondArr.map(item => item.toLowerCase());
+  
+  /* then I run a for loop to test if each element is included from the 2nd array in the first array
+     I save the matching elements in matchArr */
+  let matchArr = []
+  for(let i = 0; i < arrTwoLowercase.length; i++){
+    if(arrOneLowercase.includes(arrTwoLowercase[i])){
+      matchArr.push(arrTwoLowercase[i]);
+    }
+  }
+  
+  // I test if the array is the same as the second array of letters
+  if(arrTwoLowercase.length == matchArr.length){
+    return true;
+  } else { return false }
+}
+
+console.log(mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]));
+// returns true
+```
