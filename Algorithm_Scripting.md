@@ -254,3 +254,17 @@ function chunkArrayInGroups(arr, size) {
   return chunks;
 }
 ```
+
+### TASK 11:
+We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them.
+
+The lowest number will not always come first.
+
+```javascript
+function sumAll(arr) {
+  return arr.sort((a,b) => a - b).reduce((a,b) => (a + b) * (b - a + 1) / 2); 
+};
+
+console.log(sumAll([1, 4])); // returns 10
+console.log(sumAll([10, 5])); // returns 45
+``` 
