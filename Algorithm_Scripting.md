@@ -3,7 +3,6 @@
 Return an array consisting of the largest number from each provided sub-array.
 ```javascript
 function largestOfFour(arr) {
-  // You can do this!
   let maxArray = arr.map(function(item){
     return Math.max.apply(null, item);
   });
