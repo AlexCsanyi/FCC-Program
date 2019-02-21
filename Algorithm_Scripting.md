@@ -281,3 +281,22 @@ function diffArray(arr1, arr2) {
 
 console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])); // returns 4
 ```
+
+### TASK 13:
+You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+
+Note
+You have to use the arguments object.
+
+```javascript
+function destroyer(arr) {
+  // declare new array of arguments from index 1
+  let args = [...arguments].slice(1);
+  
+  // use ES6 filter method to find unique values only between the 2 arrays
+  let newArr = arr.filter(a => args.indexOf(a) == -1); 
+  return newArr;
+}
+
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3)); // returns 1,1
+```
