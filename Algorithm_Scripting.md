@@ -348,11 +348,13 @@ function pairElement(str) {
   // an empty array where the subarrays can be stored
   let arr = [];
   
-  // a for loop to iterate through each letter in splitStr and declare an empty array; there will be multiple subarrays
+  /* a for loop to iterate through each letter in splitStr 
+  and declare an empty array; there will be multiple subarrays */
   for (let i = 0; i < str.length; i++) {
     let subArr = [];
   
-  // use a switch statement to avoid multiple if statements; and match each letter with its DNA pair and push them into subarrays
+  /* use a switch statement to avoid multiple if statements; 
+  and match each letter with its DNA pair and push them into subarrays */
     switch (str[i]) {
       case 'G':
         subArr.push('G', 'C');
@@ -377,4 +379,35 @@ function pairElement(str) {
 }
 
 console.log(pairElement("TTGAG")); 
+```
+
+### TASK 16:
+
+```javascript
+function fearNotLetter(str) {
+  // created a new array of the alphabet
+  let abc = "abcdefghijklmnopqrstuvwxyz".split('')
+  
+  // array of the str
+  let splitStr = str.split('')
+  
+  // declaring the indexes of the first and last elemnts
+  let index1 = abc.indexOf(splitStr[0]);
+  let index2 = abc.indexOf(splitStr[splitStr.length - 1]);
+  
+  // declaring the temp array that is our desired array
+  let tempArr = abc.slice(index1, index2+1) 
+
+  // using filter - i find the difference between the 2 arrays and return it as string
+  let newArr = tempArr.filter(i => splitStr.indexOf(i) < 0).toString();
+  
+  // if there is no difference return undefined
+  if (newArr.length == 0) {
+    return undefined
+  } else {
+    return newArr
+  }
+}
+
+console.log(fearNotLetter("bcdf"));
 ```
