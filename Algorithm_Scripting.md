@@ -327,3 +327,54 @@ function myReplace(str, before, after) {
 console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));
 // returns He is Sitting on the couch
 ```
+
+### TASK 15:
+The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.
+
+Base pairs are a pair of AT and CG. Match the missing element to the provided character.
+
+Return the provided character as the first element in each array.
+
+For example, for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]
+
+The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
+
+```javascript
+function pairElement(str) {
+
+  // using "split" to break down the str into an array of letters
+  let splitStr = str.split('');
+  
+  // an empty array where the subarrays can be stored
+  let arr = [];
+  
+  // a for loop to iterate through each letter in splitStr and declare an empty array; there will be multiple subarrays
+  for (let i = 0; i < str.length; i++) {
+    let subArr = [];
+  
+  // use a switch statement to avoid multiple if statements; and match each letter with its DNA pair and push them into subarrays
+    switch (str[i]) {
+      case 'G':
+        subArr.push('G', 'C');
+        break;
+      case 'C':
+        subArr.push('C', 'G');
+        break;
+      case 'A':
+        subArr.push('A','T');
+        break;
+      case 'T':
+        subArr.push('T', 'A');
+        break;
+    }
+    
+    // push the subarrays declared aobve into the parent array
+    arr.push(subArr);
+  }
+  
+  // finally return the parent array
+  return arr;
+}
+
+console.log(pairElement("TTGAG")); 
+```
