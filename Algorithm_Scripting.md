@@ -428,3 +428,31 @@ return [...new Set(myArr)]
 
 console.log(uniteUnique([1, 3, 2], [1, [5]], [2, [4]]));
 ```
+
+### TASK 18:
+Given the array arr, iterate through and remove each element starting from the first element (the 0 index) until the function func returns true when the iterated element is passed through it.
+
+Then return the rest of the array once the condition is satisfied, otherwise, arr should be returned as an empty array.
+
+```javascript
+function dropElements(arr, func) {
+ 
+  // filter the arr if the func is true
+  let myArr = arr.filter(i => func(i) === true)
+
+  // define the index as the first occurance where func is true in arr
+  let index = arr.indexOf(myArr[0])
+
+
+  // if the func is never true return myArr (empty)
+  if (myArr.length == 0 || myArr == undefined) {
+    return myArr
+    
+    // or return the arr from index
+  } else {
+    return arr.slice(index)
+  }
+}
+
+console.log(dropElements([1, 2, 3, 4], function(n) {return n > 5;}));  // returns the empty myArr
+```
