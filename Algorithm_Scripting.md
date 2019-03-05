@@ -483,7 +483,7 @@ function palindrome(str) {
   }
 }
 
-
-
 console.log(palindrome("A man, a plan, a canal. Panama")); // returns true
 ```
+
+My solution is slow on large strings an advanced solution would be to check character by character and if at least 1 character is not matching return false otherwise return true.
